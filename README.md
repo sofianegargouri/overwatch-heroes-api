@@ -1,5 +1,7 @@
 # Overwatch Heroes API
 
+[![Build Status](https://travis-ci.org/sofianegargouri/overwatch-heroes-api.svg?branch=master)](https://travis-ci.org/sofianegargouri/overwatch-heroes-api) [![Heroku](https://heroku-badge.herokuapp.com/?app=overwatch-heroes-api)]
+
 ## Getting started
 
 ```

@@ -7,6 +7,9 @@ env:
 - "RAILS_ENV=test"
 services:
 - postgresql
+before_install:
+- gem update --system
+- gem install bundler
 before_script:
 - cp .travis/database.yml config/database.yml
 - bundle exec rake db:create db:migrate
