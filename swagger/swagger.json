@@ -1,0 +1,88 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "API"
+  },
+  "paths": {
+    "/heros": {
+      "get": {
+        "summary": "Indexes heros",
+        "tags": [
+          "Heros"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "heros fetched",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/hero"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/heros/{id}": {
+      "get": {
+        "summary": "Retrieves a hero",
+        "tags": [
+          "Heros"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "name found",
+            "schema": {
+              "$ref": "#/definitions/hero"
+            }
+          },
+          "404": {
+            "description": "hero not found"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "hero": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "db_id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "string"
+        },
+        "image_portrait_url": {
+          "type": "string"
+        },
+        "image_splash_url": {
+          "type": "string"
+        },
+        "image_card_background_url": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

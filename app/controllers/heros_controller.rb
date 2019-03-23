@@ -19,6 +19,6 @@ class HerosController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_hero
-    @hero = Hero.find_by(slug: params[:id])
+    @hero = Hero.find_by!(slug: params[:id])
   end
 end
