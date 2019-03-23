@@ -1,0 +1,5 @@
+test:
+  adapter: postgresql
+  database: heroes-test
+  username: postgres
+  password:

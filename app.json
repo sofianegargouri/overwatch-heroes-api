@@ -1,0 +1,17 @@
+{
+  "name": "Overwatch Heroes API",
+  "repository": "https://github.com/sofianegargouri/overwatch-heroes-api",
+  "scripts": {
+    "postdeploy": "rails db:setup"
+  },
+  "env": {},
+  "formation": {},
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    }
+  ]
+}
