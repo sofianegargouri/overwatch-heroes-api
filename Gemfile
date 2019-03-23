@@ -26,6 +26,9 @@ gem 'puma', '~> 3.11'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Hotfix for heroku build
+gem 'rspec-rails'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
@@ -40,7 +43,6 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'factory_bot_rails'
   gem 'faker'
-  gem 'rspec-rails'
 
   # Debugging
   gem 'pry'

@@ -17,5 +17,3 @@ before_script:
 script:
 - bundle exec rspec
 - bundle exec rubocop
-addons:
-  postgresql: 11.2
