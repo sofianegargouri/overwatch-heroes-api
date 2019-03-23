@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::API
-  rescue_from ActiveRecord::RecordNotFound do |exception|
-    render nothing: true, status: 404
+  rescue_from ActiveRecord::RecordNotFound do |_exception|
+    render nothing: true, status: :not_found
   end
 end

@@ -29,9 +29,9 @@ RSpec.configure do |config|
             slug: { type: :string },
             image_portrait_url: { type: :string },
             image_splash_url: { type: :string },
-            image_card_background_url: { type: :string },
+            image_card_background_url: { type: :string }
           }
-        },
+        }
       }
     }
   }

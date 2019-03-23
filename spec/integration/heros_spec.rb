@@ -10,7 +10,7 @@ describe 'Heros API' do
 
       response '200', 'heros fetched' do
         schema type: :array,
-              items: { '$ref' => '#/definitions/hero' }
+               items: { '$ref' => '#/definitions/hero' }
 
         run_test!
       end
