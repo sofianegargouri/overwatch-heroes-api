@@ -1,24 +1,14 @@
-# README
+# Overwatch Heroes API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Getting started
 
-Things you may want to cover:
+```
+# Setup your env variables
+$ cp .env.example .env        # Don't forget to update the .env according to your environment
 
-* Ruby version
+# Start the database
+$ docker-compose up           # Add '&' at the end if you want to run it in background
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Install the dependencies
+$ bundle install
+```

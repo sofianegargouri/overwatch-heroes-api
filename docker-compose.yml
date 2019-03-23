@@ -1,0 +1,20 @@
+version: '2'
+services:
+  overwatch-heroes-db:
+    image: postgres:11.2
+    container_name: overwatch-heroes-db
+    environment:
+      POSTGRES_DB: overwatch-heroes-development
+      POSTGRES_USER: overwatch-heroes
+      POSTGRES_PASSWORD:
+    ports:
+    - 6020:5432/tcp
+  overwatch-heroes-db-test:
+    image: postgres:11.2
+    container_name: overwatch-heroes-db-test
+    environment:
+      POSTGRES_DB: overwatch-heroes-test
+      POSTGRES_USER: overwatch-heroes
+      POSTGRES_PASSWORD:
+    ports:
+    - 6021:5432/tcp
