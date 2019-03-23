@@ -1,0 +1,16 @@
+AllCops:
+  Exclude:
+  - 'bin/**/*'
+  - 'db/schema.rb'
+  - 'script/**/*'
+  - 'vendor/**/*'
+  TargetRubyVersion: 2.6
+
+Rails:
+  Enabled: true
+
+Metrics/LineLength:
+  Max: 160
+
+Style/Documentation:
+  Enabled: false
