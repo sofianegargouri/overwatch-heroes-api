@@ -3,7 +3,9 @@
 FactoryBot.define do
   factory :hero do
     sequence :db_id, &:to_s
-    name { Faker::Games::Overwatch.hero }
+    sequence :name do |idx|
+      "#{Faker::Games::Overwatch.hero} #{idx}"
+    end
     slug { name.downcase.strip.tr(' ', '-').gsub(/[^\w-]/, '') }
     image_portrait_url { Faker::Placeholdit.image }
     image_splash_url { Faker::Placeholdit.image }

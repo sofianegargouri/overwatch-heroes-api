@@ -5,7 +5,7 @@ class HerosController < ApplicationController
 
   # GET /heros
   def index
-    @heros = Hero.all
+    @heros = Hero.all.page(params[:page]).per(params[:per_page])
 
     render json: @heros
   end

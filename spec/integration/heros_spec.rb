@@ -7,8 +7,18 @@ describe 'Heros API' do
     get 'Indexes heros' do
       tags 'Heros'
       consumes 'application/json'
+      parameter name: :page,
+                type: :number,
+                description: 'Page number',
+                in: :query
+      parameter name: :per_page,
+                type: :number,
+                description: 'Items per page',
+                in: :query
 
       response '200', 'heros fetched' do
+        let(:page) { 1 }
+        let(:per_page) { 5 }
         schema type: :array,
                items: { '$ref' => '#/definitions/hero' }
 

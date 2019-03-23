@@ -26,6 +26,9 @@ gem 'puma', '~> 3.11'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Pagination
+gem 'kaminari'
+
 # Hotfix for heroku build
 gem 'rspec-rails'
 
